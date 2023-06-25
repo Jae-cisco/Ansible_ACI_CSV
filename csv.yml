@@ -35,7 +35,7 @@
       tenant: "{{ item.tenant }}"
       description: "Tenant configured by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - tenant: "{{ mytenant.list.0.tenant }}"
       - tenant: "{{ mytenant.list.1.tenant }}"
@@ -50,7 +50,7 @@
       vrf: "{{ item.vrf }}"
       description: "VRF configured by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - tenant: "{{ mytenant.list.0.tenant }}"
         vrf: "{{ mytenant.list.0.vrf }}"
@@ -71,7 +71,7 @@
       l2_unknown_unicast: proxy
       description: "BD configured by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - tenant: "{{ mytenant.list.0.tenant }}"
         vrf: "{{ mytenant.list.0.vrf }}"
@@ -93,7 +93,7 @@
       scope: "{{ item.scope }}"
       description: "BD subnet added by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - tenant: "{{ mytenant.list.0.tenant }}"
         # vrf: "{{ mytenant.list.0.vrf }}"
@@ -118,7 +118,7 @@
       ap: "{{ item.app_pro }}"
       description: "app profile configured by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - tenant: "{{ mytenant.list.0.tenant }}"
         app_pro: "{{ mytenant.list.0.ap }}"
@@ -137,7 +137,7 @@
       bd: "{{ item.bd }}"
       description: "EPG configured by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       # For first set of EPGs
       - tenant: "{{ mytenant.list.0.tenant }}"
@@ -177,7 +177,7 @@
       scope: "context"
       description: "Contract created by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - contract: "{{ mytenant.list.0.contract1 }}"
         tenant: "{{ mytenant.list.0.tenant }}"
@@ -194,7 +194,7 @@
       tenant: "{{ item.tenant }}"
       description: "Filter created by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - filter: "{{ mytenant.list.0.filter1 }}"
         tenant: "{{ mytenant.list.0.tenant }}"
@@ -216,7 +216,7 @@
       filter: "{{ item.filter }}"
       description: "Filter Entry created by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - filter: "{{ mytenant.list.0.filter1 }}"
         tenant: "{{ mytenant.list.0.tenant }}"
@@ -241,7 +241,7 @@
       reverse_filter: yes
       description: "Subject created by Ansible"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - tenant: "{{ mytenant.list.0.tenant }}"
         contract: "{{ mytenant.list.0.contract1 }}"
@@ -261,7 +261,7 @@
       filter: "{{ item.filter }}"
       subject: "{{ item.subject }}"
       validate_certs: false
-      state: present
+      state: absent
     loop:
       - tenant: "{{ mytenant.list.0.tenant }}"
         contract: "{{ mytenant.list.0.contract1 }}"
@@ -284,7 +284,7 @@
       contract: "{{ item.contract }}"
       contract_type: "{{ item.type }}"
       validate_certs: no
-      state: present
+      state: absent
     loop:
       - tenant: "{{ mytenant.list.0.tenant }}"
         epg: "{{ mytenant.list.0.epg1 }}"
