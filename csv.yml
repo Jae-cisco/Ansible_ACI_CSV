@@ -3,16 +3,13 @@
   hosts: apic1
   connection: local
   gather_facts: false
-  become: true
-  become_method: sudo
-  become_password: 1234Qwer
   vars:
     aci_login: &aci_login
       hostname: '{{ inventory_hostname }}'
       username: '{{ username }}'
       password: '{{ password }}' 
       validate_certs: False 
-      output_path: "/etc/semaphore/dryrun_data.json"
+      output_path: "check_json.json"
   tasks:
   # Read a CSV file and access Tenant csv
   - name: Read data from CSV file to be used to configure ACI
