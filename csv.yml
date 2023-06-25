@@ -28,8 +28,7 @@
 
   - name: Create Tenants using CSV and loop
     aci_tenant:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -43,8 +42,7 @@
 
   - name: Create ansible-VRF
     aci_vrf:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -61,8 +59,7 @@
 
   - name: Creating BDs with CSV file
     aci_bd:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -85,8 +82,7 @@
 
   - name: Creating ansible-BD Subnet using CSV
     aci_bd_subnet:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -114,8 +110,7 @@
 
   - name: Create ansible-AP
     aci_ap:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -132,8 +127,7 @@
 
   - name: Creating EPGs
     aci_epg:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -174,8 +168,7 @@
 
   - name: Creating Contracts
     aci_contract:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -193,8 +186,7 @@
 
   - name: Add Filters
     aci_filter:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -212,8 +204,7 @@
 
   - name: Add Port 80 and 1433 to Filter entries
     aci_filter_entry:
-      aci_tenant:
-        <<: *aci_login 
+      <<: *aci_login 
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -240,8 +231,7 @@
 
   - name: Bind subjects to contracts
     aci_contract_subject:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -262,8 +252,7 @@
 
   - name: Bind Contract Subjects to filter
     aci_contract_subject_to_filter:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
@@ -285,8 +274,7 @@
 
   - name: Bind EPGs to Contract
     aci_epg_to_contract:
-      aci_tenant:
-        <<: *aci_login
+      <<: *aci_login
       hostname: "{{ inventory_hostname }}"
       username: "{{ username }}"
       #private_key: "{{ private_key }}"
