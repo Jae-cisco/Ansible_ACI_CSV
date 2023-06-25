@@ -4,6 +4,7 @@
   connection: local
   gather_facts: false
   become: true
+  become_method: su
   vars:
     aci_login: &aci_login
       hostname: '{{ inventory_hostname }}'
