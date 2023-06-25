@@ -9,7 +9,7 @@
       username: '{{ username }}'
       password: '{{ password }}' 
       validate_certs: False 
-      output_path: "/home/jaheo/dryrun_data.json"
+      output_path: "~/home/jaheo/dryrun_data.json"
   tasks:
   # Read a CSV file and access Tenant csv
   - name: Read data from CSV file to be used to configure ACI
